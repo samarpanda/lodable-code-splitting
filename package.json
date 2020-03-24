@@ -1,0 +1,26 @@
+{
+  "name": "lodable-code-splitting",
+  "version": "1.0.0",
+  "main": "index.js",
+  "scripts": {
+    "app": "parcel index.html --out-dir dist",
+    "test": "echo \"No Test specified \" && exit 1"
+  },
+  "dependencies": {
+    "react": "^16.13.1",
+    "react-dom": "^16.13.1",
+    "react-router-dom": "^5.1.2"
+  },
+  "devDependencies": {
+    "babel-core": "^6.26.3",
+    "babel-plugin-emotion": "^10.0.29",
+    "babel-plugin-transform-object-rest-spread": "^6.26.0",
+    "babel-preset-env": "^1.7.0",
+    "babel-preset-react": "^6.24.1",
+    "jest": "^25.1.0",
+    "parcel": "^1.12.4"
+  },
+  "author": "er.samarpanda@gmail.com",
+  "license": "MIT",
+  "private": true
+}
