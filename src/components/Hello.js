@@ -1,12 +1,12 @@
 import React, { useState, Fragment } from 'react';
+import Loadable from 'react-loadable';
 
-const Hi = () => {
-  return (
-    <Fragment>
-      <h2>Hi Activated!</h2>
-    </Fragment>
-  );
-};
+const LoadableHi = Loadable({
+  loader: () => import('./Hi'),
+  loading() {
+    return <div>Loading...</div>;
+  }
+});
 
 const Hello = () => {
   const [status, setStatus] = useState(false);
@@ -21,7 +21,7 @@ const Hello = () => {
       <button onClick={clickHandler}>
         {status ? 'Click to Inactivate' : 'Click to Activate'}
       </button>
-      {status ? <Hi /> : null}
+      {status ? <LoadableHi /> : null}
     </div>
   );
 };
